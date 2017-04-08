@@ -1,0 +1,9 @@
+Pedro:
+
+Tu vai criar(Faz daquele mesmo jeito que eu te mostrei * Não esquece do POM *) o servidor na tua Workspace mesmo, e depois copiar o projeto e colar ele aqui.
+
+O nome da tua pasta e do teu projeto será IFit_Serive.
+
+Qualquer dúvida pode perguntar a Rosemberg.
+
+Pode apagar esse txt depois.
