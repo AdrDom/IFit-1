@@ -48,4 +48,8 @@ angulaAppModulo.controller('alunoController', function (AlunoService, $scope, $s
     $scope.redirecionar = function () {        
         $state.transitionTo('home');
     };
+    $scope.redireciona = function () {        
+        $state.transitionTo('diaCardapio');
+    };
+    
 });
