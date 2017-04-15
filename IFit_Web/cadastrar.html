@@ -2,27 +2,45 @@
 
     <div class="row">
         <div class="page-header">
-            <h3>Cadastrar Aluno</h3>
+            <h3>Cadastrar Refeição</h3>
         </div>
     </div>    
     
     <div class="row">
         <form class="form-inline">
                 <md-input-container>
-                    <label>Nome</label>
-                    <input ng-model="aluno.nome" placeholder="Nome" required>
+                    <label>Comida</label>
+                    <input ng-model="cardapio.comida" placeholder="Comida" required>
                 </md-input-container>
                 <md-input-container>
-                    <label>Matricula</label>
-                    <input ng-model="aluno.matricula" ng-keyup="addCampo()" placeholder="Matricula" required>
+                    <label>Carne</label>
+                    <input ng-model="cardapio.carne" ng-keyup="addCampo()" placeholder="Carne" required>
                 </md-input-container>
+                <md-input-container>
+                    <label>Suco</label>
+                    <input ng-model="cardapio.suco" ng-keyup="addCampo()" placeholder="Suco" required>
+                </md-input-container>
+
                 
+                <md-input-container flex="50">
+                    <label>Dia da semana</label>
+                    <md-select name="type" ng-model="refeicao.dia" required>
+                        <md-option value="segunda">Segunda</md-option>
+                        <md-option value="terca">Terça</md-option>
+                        <md-option value="quarta">Quarta</md-option>
+                        <md-option value="quinta">Quinta</md-option>
+                        <md-option value="sexta">Sexta</md-option>
+                        <md-option value="sabado">Sábado</md-option>
+                    </md-select>
+                </md-input-container>
             
-            <md-button class="md-raised md-primary" ng-click="adicionarAluno()">Cadastrar</md-button>
-            
-            <button class="btn btn-primary" ng-click="redirecionar()">
-                Redirecionar Aluno
-            </button> 
+                <md-button class="md-raised md-primary" ng-click="adicionarAluno()">
+                    Cadastrar
+                </md-button>
+    
+                <md-button class="md-raised md-primary" ng-click="redirecionar()">
+                    Redirecionar
+                </md-button>
         </form>
         
     </div>
