@@ -1,0 +1,29 @@
+<div class="container" ng-controller="alunoController">
+
+    <div class="row">
+        <div class="page-header">
+            <h3>Cadastrar Aluno</h3>
+        </div>
+    </div>    
+    
+    <div class="row">
+        <form class="form-inline">
+                <md-input-container>
+                    <label>Nome</label>
+                    <input ng-model="aluno.nome" placeholder="Nome" required>
+                </md-input-container>
+                <md-input-container>
+                    <label>Matricula</label>
+                    <input ng-model="aluno.matricula" ng-keyup="addCampo()" placeholder="Matricula" required>
+                </md-input-container>
+                
+            
+            <md-button class="md-raised md-primary" ng-click="adicionarAluno()">Cadastrar</md-button>
+            
+            <button class="btn btn-primary" ng-click="redirecionar()">
+                Redirecionar Aluno
+            </button> 
+        </form>
+        
+    </div>
+</div>
