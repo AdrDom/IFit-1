@@ -10,13 +10,13 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.rosemberg.ifit.activities.SplashScreen"
-    android:background="@drawable/background">
+    android:background="@android:color/background_light">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/logo144"
-        android:id="@+id/imageView"
+        android:src="@drawable/logomaior"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:id="@+id/imageView" />
 </RelativeLayout>
