@@ -125,6 +125,43 @@ public class AlimentoController {
 		// Resposta
 		return builder.build();
 	}
+	
+	@PermitAll
+	@GET
+	@Path("/nome/{nome}")
+	@Produces("application/json")
+	public Response getAlimentoByNome(@PathParam("nome") String nome) {
+
+		// Preparando a resposta. Provisoriamente o sistema preparará a resposta
+		// como requisição incorreta.
+		ResponseBuilder builder = Response.status(Response.Status.BAD_REQUEST);
+		builder.expires(new Date());
+
+		try {
+
+			// Regra de negócio e manipulação de dados nesse ponto.
+			Alimento alimento = AlimentoDAO.getInstance().getAlimentoByNome(nome);
+
+			if (alimento != null) {
+
+				// As informaçãos associadas ao build para o response.
+				builder.status(Response.Status.OK);
+				builder.entity(alimento);
+
+			} else {
+
+				// Conteúdo não encontrado.
+				builder.status(Response.Status.NOT_FOUND);
+			}
+
+		} catch (SQLException exception) {
+
+			builder.status(Response.Status.INTERNAL_SERVER_ERROR);
+		}
+
+		// Resposta
+		return builder.build();
+	}
 
 	@PermitAll
 	@POST

@@ -19,9 +19,10 @@ public class Alimento {
 	public Alimento(){
 		
 	}
-	
-	public Alimento(String calorias, String proteinas, String carboidratos, String gorduras) {
+
+	public Alimento(String nome, String calorias, String proteinas, String carboidratos, String gorduras) {
 		super();
+		this.nome = nome;
 		this.calorias = calorias;
 		this.proteinas = proteinas;
 		this.carboidratos = carboidratos;
@@ -32,6 +33,9 @@ public class Alimento {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_alimento")
 	private int id;
+	
+	@Column(name = "nome")
+	private String nome;
 	
 	@Column(name = "calorias")
 	private String calorias;
@@ -98,6 +102,7 @@ public class Alimento {
 		result = prime * result + ((carboidratos == null) ? 0 : carboidratos.hashCode());
 		result = prime * result + ((gorduras == null) ? 0 : gorduras.hashCode());
 		result = prime * result + id;
+		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
 		result = prime * result + ((proteinas == null) ? 0 : proteinas.hashCode());
 		return result;
 	}
@@ -128,6 +133,11 @@ public class Alimento {
 			return false;
 		if (id != other.id)
 			return false;
+		if (nome == null) {
+			if (other.nome != null)
+				return false;
+		} else if (!nome.equals(other.nome))
+			return false;
 		if (proteinas == null) {
 			if (other.proteinas != null)
 				return false;
@@ -138,8 +148,8 @@ public class Alimento {
 
 	@Override
 	public String toString() {
-		return "Alimento [id=" + id + ", calorias=" + calorias + ", proteinas=" + proteinas + ", carboidratos="
-				+ carboidratos + ", gorduras=" + gorduras + "]";
+		return "Alimento [id=" + id + ", nome=" + nome + ", calorias=" + calorias + ", proteinas=" + proteinas
+				+ ", carboidratos=" + carboidratos + ", gorduras=" + gorduras + "]";
 	}
 	
 }
