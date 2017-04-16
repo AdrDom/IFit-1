@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" ng-controller="alunoController">
     <div class="row">
         <div class="page-header">
             <h3>{{cardapio.dia}}</h3>
@@ -8,16 +8,20 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>Comida</th>
+                    <th>Grãos</th>
+                    <th>Frutas</th>
                     <th>Carne</th>
                     <th>Suco</th>
+                    <th>Complemento</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>{{ cardapio.dia.comida }}</td>
-                    <td>{{ cardapio.dia.carne }}</td>
-                    <td>{{ cardapio.dia.suco }}</td>
+                    <td>{{ cardapio.graos }}</td>
+                    <td>{{ cardapio.frutas }}</td>
+                    <td>{{ cardapio.carne }}</td>
+                    <td>{{ cardapio.suco }}</td>
+                    <td>{{ cardapio.complemento }}</td>
                 </tr>
             </tbody>
         </table>

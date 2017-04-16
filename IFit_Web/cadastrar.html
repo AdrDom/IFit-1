@@ -9,8 +9,12 @@
     <div class="row">
         <form class="form-inline">
                 <md-input-container>
-                    <label>Comida</label>
-                    <input ng-model="cardapio.comida" placeholder="Comida" required>
+                    <label>Grãos</label>
+                    <input ng-model="cardapio.graos" placeholder="Grãos" required>
+                </md-input-container>
+                <md-input-container>
+                    <label>Frutas</label>
+                    <input ng-model="cardapio.frutas" ng-keyup="addCampo()" placeholder="Frutas" required>
                 </md-input-container>
                 <md-input-container>
                     <label>Carne</label>
@@ -20,7 +24,10 @@
                     <label>Suco</label>
                     <input ng-model="cardapio.suco" ng-keyup="addCampo()" placeholder="Suco" required>
                 </md-input-container>
-
+                <md-input-container>
+                    <label>Complemento</label>
+                    <input ng-model="cardapio.complemento" ng-keyup="addCampo()" placeholder="Complemento" required>
+                </md-input-container>
                 
                 <md-input-container flex="50">
                     <label>Dia da semana</label>
@@ -34,7 +41,7 @@
                     </md-select>
                 </md-input-container>
             
-                <md-button class="md-raised md-primary" ng-click="adicionarAluno()">
+                <md-button class="md-raised md-primary" ng-click="adicionaRefeicao()">
                     Cadastrar
                 </md-button>
     

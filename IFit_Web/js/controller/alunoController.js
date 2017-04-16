@@ -1,6 +1,7 @@
 angulaAppModulo.controller('alunoController', function (AlunoService, $scope, $state) {
 
     var TAMANHO_MINIMO_PESQUISA = 3;
+    $scope.refeicoes = [];
     
     $scope.alunos = [];
 

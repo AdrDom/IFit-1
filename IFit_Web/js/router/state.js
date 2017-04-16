@@ -25,4 +25,8 @@ angulaAppModulo.config(function ($stateProvider, $urlRouterProvider) {
             url: '/diaCardapio',
             templateUrl: 'diaCardapio.html'
         })
+        .state('info', {
+            url: '/informacoes',
+            templateUrl: 'info.html'
+        })
 });
