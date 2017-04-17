@@ -10,23 +10,23 @@
         <form class="form-inline">
                 <md-input-container>
                     <label>Grãos</label>
-                    <input ng-model="cardapio.graos" placeholder="Grãos" required>
+                    <input ng-model="refeicao.graos" placeholder="Grãos" required>
                 </md-input-container>
                 <md-input-container>
                     <label>Frutas</label>
-                    <input ng-model="cardapio.frutas" ng-keyup="addCampo()" placeholder="Frutas" required>
+                    <input ng-model="refeicao.frutas" ng-keyup="addCampo()" placeholder="Frutas" required>
                 </md-input-container>
                 <md-input-container>
                     <label>Carne</label>
-                    <input ng-model="cardapio.carne" ng-keyup="addCampo()" placeholder="Carne" required>
+                    <input ng-model="refeicao.carne" ng-keyup="addCampo()" placeholder="Carne" required>
                 </md-input-container>
                 <md-input-container>
                     <label>Suco</label>
-                    <input ng-model="cardapio.suco" ng-keyup="addCampo()" placeholder="Suco" required>
+                    <input ng-model="refeicao.suco" ng-keyup="addCampo()" placeholder="Suco" required>
                 </md-input-container>
                 <md-input-container>
                     <label>Complemento</label>
-                    <input ng-model="cardapio.complemento" ng-keyup="addCampo()" placeholder="Complemento" required>
+                    <input ng-model="refeicao.complemento" ng-keyup="addCampo()" placeholder="Complemento" required>
                 </md-input-container>
                 
                 <md-input-container flex="50">
@@ -41,14 +41,13 @@
                     </md-select>
                 </md-input-container>
             
-                <md-button class="md-raised md-primary" ng-click="adicionaRefeicao()">
+                <md-button class="md-raised md-primary" ng-click="adicionarRefeicao(refeicao)">
                     Cadastrar
                 </md-button>
     
                 <md-button class="md-raised md-primary" ng-click="redirecionar()">
                     Redirecionar
                 </md-button>
-        </form>
-        
+        </form>        
     </div>
 </div>

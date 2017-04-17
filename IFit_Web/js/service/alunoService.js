@@ -6,8 +6,8 @@ angulaAppModulo.factory("AlunoService", function($http) {
         return $http.get(urlBase + "/aluno/listar/")
     };
     
-    var _cadastrarAluno = function(aluno){
-		return $http.post(urlBase + "/aluno/inserir", aluno)
+    var _cadastrarRefeicao = function(refeicao){
+		return $http.post(urlBase + "/refeicao/inserir", refeicao)
 	};
     
     var _consultarAlunoByNome = function(nome){
@@ -16,7 +16,7 @@ angulaAppModulo.factory("AlunoService", function($http) {
 
     return {
         listarAlunos: _listarAlunos,
-        cadastrarAluno: _cadastrarAluno,
+        cadastrarRefeicao: _cadastrarRefeicao,
         consultarAlunoByNome: _consultarAlunoByNome
     };
 });

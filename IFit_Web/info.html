@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" ng-controller="alunoController">
     <div class="row">
         <div class="page-header">
             <h3>Informações</h3>
@@ -6,13 +6,21 @@
     </div>    
     
     <div class="row">
-        <p>
-            <a ui-sref="home" class="link">Grãos</a><br>
-            <a ui-sref="home" class="link">Frutas</a><br>
-            <a ui-sref="home" class="link">Carnes</a><br>
-            <a ui-sref="home" class="link">Sucos</a><br>
-            <a ui-sref="home" class="link">Complementos</a>
-        </p>
+        <md-button class="md-raised md-primary" ng-click="redireciona()">
+                    Grãos
+                </md-button>
+                <md-button class="md-raised md-primary" ng-click="redireciona()">
+                    Frutas 
+                </md-button>
+                <md-button class="md-raised md-primary" ng-click="redireciona()">
+                    Carne
+                </md-button>
+                <md-button class="md-raised md-primary" ng-click="redireciona()">
+                    Suco
+                </md-button>
+                <md-button class="md-raised md-primary" ng-click="redireciona()">
+                    Complementos
+                </md-button>
     </div>
 
 </div>

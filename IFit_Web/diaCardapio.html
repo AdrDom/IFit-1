@@ -1,13 +1,14 @@
 <div class="container" ng-controller="alunoController">
     <div class="row">
         <div class="page-header">
-            <h3>{{cardapio.dia}}</h3>
+            <h3>Cardapio</h3>
         </div>
     </div>    
     <div class="row">
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <th>Dia</th>
                     <th>Grãos</th>
                     <th>Frutas</th>
                     <th>Carne</th>
@@ -16,12 +17,13 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>{{ cardapio.graos }}</td>
-                    <td>{{ cardapio.frutas }}</td>
-                    <td>{{ cardapio.carne }}</td>
-                    <td>{{ cardapio.suco }}</td>
-                    <td>{{ cardapio.complemento }}</td>
+                <tr ng-repeat="refeicao in refeicoes">
+                    <td>{{ refeicao.dia }}</td>
+                    <td>{{ refeicao.graos }}</td>
+                    <td>{{ refeicao.frutas }}</td>
+                    <td>{{ refeicao.carne }}</td>
+                    <td>{{ refeicao.suco }}</td>
+                    <td>{{ refeicao.complemento }}</td>
                 </tr>
             </tbody>
         </table>

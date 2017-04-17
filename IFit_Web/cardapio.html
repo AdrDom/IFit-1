@@ -6,24 +6,28 @@
         </div>
     </div>    
     
-    <div class="row">            
-                <md-button class="md-raised md-primary" ng-click="redireciona()">
-                    Segunda
-                </md-button>
-                <md-button class="md-raised md-primary" ng-click="redireciona()">
-                    Terça
-                </md-button>
-                <md-button class="md-raised md-primary" ng-click="redireciona()">
-                    Quarta
-                </md-button>
-                <md-button class="md-raised md-primary" ng-click="redireciona()">
-                    Quinta
-                </md-button>
-                <md-button class="md-raised md-primary" ng-click="redireciona()">
-                    Sexta
-                </md-button>
-                <md-button class="md-raised md-primary" ng-click="redireciona()">
-                    Sábado
-                </md-button>
+    <div class="row">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Dia</th>
+                    <th>Grãos</th>
+                    <th>Frutas</th>
+                    <th>Carne</th>
+                    <th>Suco</th>
+                    <th>Complemento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="refeicao in refeicoes">
+                    <td>{{ refeicao.dia }}</td>
+                    <td>{{ refeicao.graos }}</td>
+                    <td>{{ refeicao.frutas }}</td>
+                    <td>{{ refeicao.carne }}</td>
+                    <td>{{ refeicao.suco }}</td>
+                    <td>{{ refeicao.complemento }}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>

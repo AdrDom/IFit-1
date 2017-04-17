@@ -5,9 +5,14 @@ angulaAppModulo.controller('alunoController', function (AlunoService, $scope, $s
     
     $scope.alunos = [];
 
-    $scope.adicionarAluno = function () {        
-        
-        AlunoService.cadastrarAluno($scope.aluno)
+    $scope.adicionarRefeicao = function(refeicao) {
+        $scope.refeicoes.push(angular.copy(refeicao));
+    }
+    
+    
+    
+    $scope.adicionarRefeicao = function () {        
+            AlunoService.cadastrarRefeicao($scope.refeicao)
             .then(function (response) {
                 // Chamado quando a resposta contém status de sucesso.
                 // Exibir no console o conteúdo da resposta.
